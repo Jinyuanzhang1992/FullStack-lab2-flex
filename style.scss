@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+$spacing-unit: 30px;
+$margin-main-top-unit: 20px;
+$margin-card-padding-unit: 20px;
+
+footer p {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding: 20px;
+
+  h1 {
+    text-align: center;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    margin: $margin-main-top-unit auto;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-around;
+      gap: $spacing-unit;
+    }
+  }
+
+  %card {
+    padding: $margin-card-padding-unit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 2px;
+    color: #fff;
+
+    &:hover {
+      transform: translateY(-10px);
+      transition: transform 0.3s;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .card_image {
+      margin-bottom: 2rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .card_info {
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem 0;
+
+      .price {
+        background-color: rgb(75, 75, 75);
+        width: 4rem;
+        border-radius: 1.5rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.card1 {
+  @extend %card;
+  background-color: rgb(123, 255, 207);
+}
+
+.card2 {
+  @extend %card;
+  background-color: rgb(66, 114, 232);
+}
+
+.card3 {
+  @extend %card;
+  background-color: rgb(123, 255, 207);
+}
+
+.card4 {
+  @extend %card;
+  background-color: rgb(93, 43, 171);
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    main {
+      .wrapper {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

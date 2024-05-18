@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+footer p {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding: 20px;
+}
+body h1 {
+  text-align: center;
+}
+body main {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+body main .wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+body .card4, body .card3, body .card2, body .card1 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 2px;
+  color: #fff;
+}
+body .card4:hover, body .card3:hover, body .card2:hover, body .card1:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+body .card4 .card_image, body .card3 .card_image, body .card2 .card_image, body .card1 .card_image {
+  margin-bottom: 2rem;
+}
+body .card4 .card_image img, body .card3 .card_image img, body .card2 .card_image img, body .card1 .card_image img {
+  width: 100%;
+  height: 100%;
+}
+body .card4 .card_info, body .card3 .card_info, body .card2 .card_info, body .card1 .card_info {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+body .card4 .card_info .price, body .card3 .card_info .price, body .card2 .card_info .price, body .card1 .card_info .price {
+  background-color: rgb(75, 75, 75);
+  width: 4rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card1 {
+  background-color: rgb(123, 255, 207);
+}
+
+.card2 {
+  background-color: rgb(66, 114, 232);
+}
+
+.card3 {
+  background-color: rgb(123, 255, 207);
+}
+
+.card4 {
+  background-color: rgb(93, 43, 171);
+}
+
+@media screen and (max-width: 1000px) {
+  body main .wrapper {
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=style.css.map */
